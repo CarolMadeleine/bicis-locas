@@ -20,17 +20,18 @@ function validateForm(){
         return false;
     };
 
-    var email = document.getElementById("input-email").value;
-	if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(email)) ) {
-  	return false;
-	}
-    
-    var x
-    x = document.getElementById("input-password").value;
+    var x = document.getElementById("input-password").value;
     if (isNaN(x) || x== "123456" || x== "098754" || x== "password" || x.length == 5 || /^\s+$/.test(x)) {
       window.alert ("No Válido") ;
     } else {
         return true;
     };
+
+    var email = document.getElementById("input-email").value;
+	if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(email)) ) {
+  	return false;
+	};
+    
+    
 }
 
